@@ -1,4 +1,4 @@
-Project Scribe
+# Project Scribe
 
 Simple, reliable, distraction free writer to nudge you towards a better life
 story - by surfacing your receipts, one day at a time.
