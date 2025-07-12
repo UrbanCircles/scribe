@@ -165,7 +165,10 @@ In each set, there are 2x 3D Printed components:
 - The neck/ leg (connects with the head and has a channel to elegantly route/
   feed your power cable through)
 
-The printed components can be found at
+The printed components can be found on either the
+[Maker World](https://makerworld.com/en/models/1577165-project-scribe#profileId-1670812)
+page, or the
+[Printables](https://www.printables.com/model/1346462-project-scribe/files) page
 
 **Printing considerations**
 
