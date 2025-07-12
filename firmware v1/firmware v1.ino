@@ -4,6 +4,14 @@
 #include <NTPClient.h>
 #include <SoftwareSerial.h>
 
+// ********** UPDATE THESE VALUES BEFORE FLASHING FIRMWARE ********
+
+const char* wifiSSID = "Your WIFI name";
+const char* wifiPassword = "Your WIFI password";
+const long utcOffsetInSeconds = 0; // UTC offset in seconds (0 for UTC, 3600 for UTC+1, etc.)
+
+// **** YOU PROBABLY DON'T NEED TO CHANGE ANYTHING BELOW HERE *****
+
 // === Function Declarations ===
 void connectToWiFi();
 void setupWebServer();
@@ -20,12 +28,7 @@ void printLine(String line);
 void advancePaper(int lines);
 void printWrappedUpsideDown(String text);
 
-// === WiFi Configuration ===
-const char* ssid = "Your WIFI name";
-const char* password = "Your WIFI password";
-
-// === Time Configuration ===
-const long utcOffsetInSeconds = 0; // UTC offset in seconds (0 for UTC, 3600 for UTC+1, etc.)
+// === NTP Client ===
 WiFiUDP ntpUDP;
 NTPClient timeClient(ntpUDP, "pool.ntp.org", utcOffsetInSeconds, 60000);
 
@@ -91,9 +94,9 @@ void loop() {
 // === WiFi Connection ===
 void connectToWiFi() {
   Serial.print("Connecting to WiFi: ");
-  Serial.println(ssid);
-  
-  WiFi.begin(ssid, password);
+  Serial.println(wifiSSID);
+
+  WiFi.begin(wifiSSID, wifiPassword);
   
   int attempts = 0;
   while (WiFi.status() != WL_CONNECTED && attempts < 30) {
