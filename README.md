@@ -140,7 +140,7 @@ To find the value you should put for `utcOffsetInSeconds`:
 1. Go to
    [timeanddate.com's timezone page](https://www.timeanddate.com/time/zone/) and
    search for your location.
-2. Find the "Ciurrent Offset" field, and note down the number there.
+2. Find the "Current Offset" field, and note down the number there.
 3. Multiply that number by 3600.
 
 For example, if you're in New York, you'd search for "New York" on that page and
